@@ -1,0 +1,38 @@
+import java.io.*;
+
+class superdemo
+{
+int a=200;
+superdemo()
+{
+System.out.println("Parent constructor");
+}
+public void display()
+{
+System.out.println("Main class");
+}
+}
+class superdemo1 extends superdemo
+{
+int a=100;
+superdemo1()
+{
+System.out.println("Child constructor");
+}
+
+public void display()
+{
+System.out.println("Derived class");
+System.out.println(a);
+System.out.println(super.a);
+super.display();
+}
+}
+class supertest
+{
+public static void main(String args[])
+{
+superdemo1 t=new superdemo1();
+t.display();
+}
+}
