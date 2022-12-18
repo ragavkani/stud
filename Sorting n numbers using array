@@ -1,0 +1,41 @@
+import java.io.*;
+import java.lang.*;
+import java.util.Scanner;
+import java.util.*
+;
+class sort
+{
+	public static void main(String arg[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int[] a=new int[20];
+		int[] b=new int[20];
+		int temp,i,j;
+		System.out.println("Enter the value of N:");
+		int n;
+		n=sc.nextInt();
+		for( i=0;i<n;i++)
+			a[i]=sc.nextInt();
+		System.out.print("Original Array");
+		for(i=0;i<n;i++)
+			System.out.print(a[i]+"\t");
+		System.out.print(" After Sorting");
+		for(i=0;i<n;i++)
+		{
+			for(j=0;j<n;j++)
+			{
+				if(a[i]<a[j])
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		for(i=0;i<n;i++)
+			System.out.print(a[i]+"\t");
+		
+		
+		
+	}
+}
