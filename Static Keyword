@@ -1,0 +1,37 @@
+import java.io.*;
+public class stat
+{ 
+//static int i=1;
+int y;
+
+stat(int x)
+{
+this.y=x;
+
+
+
+}
+static int a=10,b=20;
+
+static void sum()
+{
+
+int x =10;
+
+System.out.println(a+b+x);
+}
+
+public void display()
+{
+System.out.println("Addition result printed");
+System.out.println(y);
+}
+public static void main(String args[])
+{
+stat s= new stat(6);
+sum();
+s.display();
+System.out.println(stat.a+" "+stat.b);
+
+}
+}
