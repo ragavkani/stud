@@ -1,0 +1,23 @@
+import java.io.*;
+public class FileWriterExample
+{
+public static void main(String args[]) throws Exception
+{
+FileWriter fw=new FileWriter("C:\\Users\\kanir\\OneDrive\\Desktop\\Parul\\Java DS\\file.txt");
+String str;
+InputStreamReader ir=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(ir);
+System.out.println(" Enter the string for writing");
+str=br.readLine();
+try
+{
+fw.write(str);
+fw.close();
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+System.out.println("Success");
+}
+}
