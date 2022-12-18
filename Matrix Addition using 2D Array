@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+class matrix
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int[][] a=new int[5][5];
+int[][] b=new int[5][5];
+int[][] c=new int[5][5];
+System.out.println("Enter the matrix values of A");
+int i,j;
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+a[i][j]=sc.nextInt();
+}
+}
+System.out.println("Enter the matrix values of B");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+b[i][j]=sc.nextInt();
+}
+}
+System.out.println("The addition result is");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+c[i][j]=a[i][j]+b[i][j];
+}
+}
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+System.out.print(c[i][j]+ " ");
+}
+System.out.print("\n");
+}
+}
+}
