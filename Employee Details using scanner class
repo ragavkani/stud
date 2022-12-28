@@ -1,0 +1,49 @@
+import java.util.*;
+import java.lang.*;
+class EmployeeDetail
+{
+    public static void main(String args[])
+    {
+        int n,key,i,flag=0;
+        int[] age=new int[50];
+        int[] empid=new int[50];
+        int[] salary=new int[50];
+        String[] name=new String[50];
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Number of employees");
+        n=sc.nextInt();
+        System.out.println("Enter the employee details one by one");
+        for(i=0;i<n;i++)
+        {
+            System.out.println("Enter the name: ");
+            name[i]=sc.next();
+            System.out.println("Enter the age: ");
+            age[i]=sc.nextInt();
+            System.out.println("Enter the employee id: ");
+            empid[i]=sc.nextInt();
+            System.out.println("Enter the salary: ");
+            salary[i]=sc.nextInt();
+        }
+        System.out.println("        Employee Information");
+        System.out.println("*************************************");
+        do{
+            System.out.println("Enter the valid employee id or 9 to exit ");
+            key=sc.nextInt();
+            if(key==9)
+            break;
+            else{
+            for(i=0;i<n;i++)
+            {
+                
+                if(key==empid[i])
+                {
+                    System.out.println("The Employee Name is : "+name[i]);
+                    System.out.println("The Employee Age is : "+age[i]);
+                    System.out.println("The Employee Id is : "+empid[i]);
+                    System.out.println("The Employee salary is : "+salary[i]);
+                }
+            }
+                }
+        }while(true);
+    }
+}
