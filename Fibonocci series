@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+class fibo
+{
+public static void main(String[] args)
+{
+int f=0,f1=-1,f2=1,n,i;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the value of N:\n");
+n=sc.nextInt();
+for(i=-0;i<n;i++)
+{
+f=f1+f2;
+f1=f2;
+f2=f;
+System.out.print(f+ " ");
+}
+}
+}
